@@ -1,6 +1,6 @@
 # Taller integrador individual
 
-**Nombre:** TU NOMBRE COMPLETO
+**Nombre:** Fernando alonso remolina mando
 
 ## Auditoría y corrección de la página de notas
 
