@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>pagina</title>
-    <link rel="stylesheet" href="Estilos Del Sitio.CSS">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -28,31 +28,30 @@
 
 <script>
 
-let data1 = [];
-let TempValue2 = 0;
-let x = 3;
+let promedio = 0;
+let cantidadnotas = 3;
 
-function calc() {
+function calcularpromedio() {
 
-    let a = parseFloat(document.getElementById("n1").value);
-    let b = parseFloat(document.getElementById("n2").value);
-    let c = parseFloat(document.getElementById("n3").value);
+    const nota1 = parseFloat(document.getElementById("n1").value);
+    const nota2 = parseFloat(document.getElementById("n2").value);
+    const nota3 = parseFloat(document.getElementById("n3").value);
 
-    console.log("valores capturados:", a, b, c);
+    console.log("valores capturados:", nota1, nota2, nota3);
 
-    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
         document.getElementById("r").innerHTML = "Debe ingresar las tres notas.";
         return;
     }
 
-    TempValue2 = (a + b + c) / x;
+    promedio = (nota1 + nota2 + nota3) / cantidadnotas;
 
-    document.getElementById("r").innerHTML = "Promedio: " + TempValue2.toFixed(2);
+    document.getElementById("resultadoPromedio").innerHTML = "Promedio: " + promedio.toFixed(2);
 
-    if (TempValue2 >= 3.0) {
-        document.getElementById("r2").innerHTML = "Resultado: aprobado";
+    if (promedio >= 3.0) {
+        document.getElementById("resultadoEstado").innerHTML = "Resultado: aprobado";
     } else {
-        document.getElementById("r2").innerHTML = "Resultado: reprobado";
+        document.getElementById("resultadoEstado").innerHTML = "Resultado: reprobado";
     }
 
     console.log("promedio calculado");
